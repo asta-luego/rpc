@@ -20,7 +20,7 @@ func main() {
 	}
 
 	rpc.HandleHTTP()
-	ln, err := net.Listen("tcp", ":8080")
+	ln, err := net.Listen("tcp", ":" + os.Getenv("PORT"))
 	if err != nil {
 		log.Fatal(err)
 	}
