@@ -10,7 +10,7 @@ type Call struct {
 func (c *Call) FirstCall(a, b *int) (err error) {
 	i := 10
 	*b = i
-	fmt.Println("a: ", *a)
-	fmt.Println("b: ", *b)
+	fmt.Println("Received: ", *a)
+	fmt.Println("Sending: ", *b)
 	return
 }
