@@ -16,7 +16,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	client, err := rpc.DialHTTP("tcp", "http://server:8080")
+	client, err := rpc.DialHTTP("tcp", "[server]:8080")
 	if err != nil {
 		log.Fatal(err)
 	}
