@@ -17,7 +17,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	client, err := rpc.DialHTTP("tcp", "[" + os.Getenv("URI") + "]:" + os.Getenv("PORT"))
+	client, err := rpc.DialHTTP("tcp", "[" + os.Getenv("URI") + "]:80")
 	if err != nil {
 		log.Fatal(err)
 	}
