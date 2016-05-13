@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/rpc"
+	"os"
 
 	"github.com/asta-luego/rpc/pkg"
 )
@@ -16,7 +17,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	client, err := rpc.DialHTTP("tcp", "[server]:8080")
+	client, err := rpc.DialHTTP("tcp", "[" + os.Getenv("URI") + "]:" + os.Getenv("PORT"))
 	if err != nil {
 		log.Fatal(err)
 	}
