@@ -5,11 +5,13 @@ import (
 	"log"
 	"net/rpc"
 	"os"
+	"time"
 
 	"github.com/asta-luego/rpc/pkg"
 )
 
 func main() {
+	time.Sleep(100 * time.Millisecond)
 	fmt.Println("Client")
 	call := &definitionsrpc.Call{}
 
